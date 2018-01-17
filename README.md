@@ -12,7 +12,7 @@ $ npm start -- [<args>...]
 
 ## Les arguments
 
-```py
+```bash
 -h | --help			# affiches les arguments
 -d | --debug=<boolean>		# active les log de debug
 -t | --thread=<number> 		# indique combien de thread doit utiliser le script au max (1 par defaut)
@@ -27,7 +27,7 @@ $ npm start -- [<args>...]
 Vous pouvez afficher des variables dans vote nom de fichier avec la syntax suivante : #[variable]
 
 #### variables disponible
-```py
+```bash
 start	# affiche l'index de la premiere transaction
 end	# affiche l'index de la derniere transaction
 length	# affiche le nombre de transactions scrapper
