@@ -1,7 +1,11 @@
 # bankin-scrapper-challenge
 
+## pré requis
+- ### [__Node__ (LTS)](https://nodejs.org/en/)
+- ### [__Yarn__](https://yarnpkg.com/en/docs/install)
 
 ## Comment utiliser
+
 
 ```bash
 $ git clone git@github.com:Orenkay/bankin-scrapper-challenge.git
