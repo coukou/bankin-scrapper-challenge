@@ -6,20 +6,19 @@
 ```bash
 $ git clone git@github.com:Orenkay/bankin-scrapper-challenge.git
 $ cd bankin-scrapper-challenge
-$ npm install
-$ npm start -- [<args>...]
+$ yarn install
+$ yarn start [options]
 ```
 
 ## Les arguments
 
 ```bash
--h | --help			# affiches les arguments
--d | --debug=<boolean>		# active les log de debug
--t | --thread=<number> 		# indique combien de thread doit utiliser le script au max (1 par defaut)
--m | --max=<number>		# indique le nombre maximum de transaction à scrapper (scrap jusqu'a trouver un tableau qui ne contient pas 50 transactions par defaut)
--s | --start=<number>		# indique la transaction de depart (1 par defaut)
--c | --concurency=<number>	# indique le nombre de scrapper par thread (10 par defaut)
--o | --output=<filename>	# specifie le chemin du fichier de sortie (sortie standard si non specifier)
+-V, --version               # output the version number
+-r, --range <start>..<end>  # la plage des transactions souhaité (start / end inclus) (default: 1)
+-s, --scrappers <value>     # le nombre de "scrapper" par navigateur (default: 20)
+-b, --browsers <value>      # le nombre de navigateurs à ouvrir (default: 1)
+-o, --output <template>     # le chemin du fichier ou écrire les transactions
+-h, --help                  # output usage information
 ```
 
 ## Filename template
@@ -33,11 +32,11 @@ end	# affiche l'index de la derniere transaction
 length	# affiche le nombre de transactions scrapper
 ```
 #### exemple
+la commande suivante
 ```
-node lib/index --output=transactions-#[start]-#[end].json
+yarn start --range=0..500 --output=transactions-#[start]-#[end].json
 ```
-si les transactions vont de 0 à 500
-cela donnera un fichier avec le nom : ``transactions-0-500.json``
+donnera un fichier avec le nom : ``transactions-0-500.json``
 
 
 
@@ -49,7 +48,7 @@ cela donnera un fichier avec le nom : ``transactions-0-500.json``
 		"Account": "Compte",
 		"Transaction": "Transaction 1",
 		"Amount": 1337,
-		"Currency": "₿"
+		"Currency": "Ƀ"
 	},
 	{
 		...
