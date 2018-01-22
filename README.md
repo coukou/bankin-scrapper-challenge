@@ -16,7 +16,7 @@ $ yarn start [options]
 -V, --version               # output the version number
 -r, --range <start>..<end>  # la plage des transactions souhaité (start / end inclus) (default: 1)
 -s, --scrappers <value>     # le nombre de "scrapper" par navigateur (default: 20)
--b, --browsers <value>      # le nombre de navigateurs à ouvrir (default: 1)
+-b, --browsers <value>      # le nombre de navigateurs (default: 2)
 -o, --output <template>     # le chemin du fichier ou écrire les transactions
 -h, --help                  # output usage information
 ```
@@ -34,7 +34,7 @@ length	# affiche le nombre de transactions scrapper
 #### exemple
 la commande suivante
 ```
-yarn start --range=0..500 --output=transactions-#[start]-#[end].json
+yarn start --range=0..500 --output="transactions-#[start]-#[end].json"
 ```
 donnera un fichier avec le nom : ``transactions-0-500.json``
 
